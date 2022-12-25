@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+    
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dar-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg) ;
+    background-position: bottom 175px right 175px , top 175px left 175px;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    
+}
+
+.container,
+.card-container{
+    width: 1175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.intro{
+    flex-basis:60%;
+}
+
+.intro h1 {
+    font-size: 50px;
+    color: var(--Very-Dark-Magenta);
+    width: 340px;
+}
+
+.intro p{
+    width: 450px;
+    color: var(--Dar-Grayish-Magenta);
+}
+
+.rating{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    gap: 10px;
+    margin-top: 70px;
+}
+
+.report-guru{
+    margin-left: 30px;
+}
+
+.best-tech{
+    margin-left: 60px;
+}
+
+.rate {
+    color: var(--Very-Dark-Magenta);
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px 15px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.stars {
+    padding-right: 20px;
+}
+
+.card-container {
+    margin-top: 50px;
+    gap: 15px;
+}
+
+.card {
+    background-color: var(--Very-Dark-Magenta);
+    color: var(--Light-Grayish-Magenta);
+    border-radius: 5px;
+    height: min-content;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.title img {
+    width: 30px;
+    border-radius: 50%;
+    margin-inline: 25px;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-weight: 500;
+}
+
+.name span:last-child {
+    color: var(--Soft-Pink);
+}
+
+.card p {
+    padding-inline: 20px;
+    line-height: 22px;
+}
+
+.card2 {
+    margin-top: 15px;
+}
+
+.card3 {
+    margin-top: 30px;
+}
