@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
 
 :root {
-    
     --Very-Dark-Magenta: hsl(300, 43%, 22%);
     --Soft-Pink: hsl(333, 80%, 67%);
     --Dar-Grayish-Magenta: hsl(303, 10%, 53%);
@@ -13,46 +12,65 @@ body{
     font-family: 'League Spartan', sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-
+    justify-content: center;
+    min-height: 100vh;
     background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg) ;
     background-position: bottom 175px right 175px , top 175px left 175px;
     background-repeat: no-repeat;
     background-size: cover; 
-    
 }
 
 .container,
-.card-container{
-    width: 1175px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+.card-container {
+    width: 100%;
+    max-width: 1175px;
+    display: grid;
+    justify-items: center;
+    place-items: center;
+    gap: 30px;
+    padding-inline: 50px;
 }
 
-.intro{
-    flex-basis:60%;
+.container{
+    grid-template-columns: repeat(auto-fit , minmax(300px, 1fr));
+    padding-bottom: 40px;
 }
+
+.card-container{
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+}
+
+/* .intro {
+    background-color: lightgreen;
+} */
 
 .intro h1 {
     font-size: 50px;
     color: var(--Very-Dark-Magenta);
-    width: 340px;
 }
 
 .intro p{
-    width: 450px;
     color: var(--Dar-Grayish-Magenta);
 }
 
 .rating{
     display: flex;
     flex-direction: column;
-    flex-basis: 40%;
     gap: 10px;
-    margin-top: 70px;
+    /* background-color: lightgoldenrodyellow; */
+}
+
+.rate {
+    color: var(--Very-Dark-Magenta);
+    background-color: var(--Light-Grayish-Magenta);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px;
+    font-weight: 700;
+    width: fit-content;
 }
 
 .report-guru{
@@ -63,32 +81,14 @@ body{
     margin-left: 60px;
 }
 
-.rate {
-    color: var(--Very-Dark-Magenta);
-    background-color: var(--Light-Grayish-Magenta);
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3px 15px;
-    font-weight: 700;
-    width: fit-content;
-}
-
 .stars {
     padding-right: 20px;
-}
-
-.card-container {
-    margin-top: 50px;
-    gap: 15px;
 }
 
 .card {
     background-color: var(--Very-Dark-Magenta);
     color: var(--Light-Grayish-Magenta);
     border-radius: 5px;
-    height: min-content;
 }
 
 .title {
@@ -126,4 +126,41 @@ body{
 
 .card3 {
     margin-top: 30px;
+}
+
+
+@media (max-width: 650px){
+    .intro h1 {
+        text-align: center;
+    }
+    .intro p {
+        padding-inline: 30px;
+        text-align: center;
+    }
+    .rate {
+        width: 100%;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        padding-top: 15px;
+        padding-inline: 15px;
+    }
+    .report-guru{
+        margin-left:0;
+    }
+    
+    .best-tech{
+        margin-left: 0;
+    }
+    .card{
+        margin-inline: 50px;
+    }
+    
+.card2 {
+    margin-top: 0;
+}
+
+.card3 {
+    margin-top: 0;
+}
 }
